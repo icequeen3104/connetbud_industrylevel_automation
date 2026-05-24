@@ -1,0 +1,22 @@
+LOGIN_EMAIL = "dhirajs@yopmail.com"
+LOGIN_PASSWORD = "Dhiraj@123"
+
+COURSE_NAME = "English"
+
+TUTOR_NAME = "Samik Bhattacharya"
+
+NUMBER_OF_CLASSES = "25"
+
+CARD_NUMBER = "5555555555554444"
+EXPIRY_DATE = "1226"
+CARD_CVC = "119"
+
+CARD_HOLDER_NAME = "isha"
+
+ADDRESS = "webel more"
+
+CITY = "kolkata"
+
+PINCODE = "700014"
+
+STATE = "West Bengal"

@@ -1,0 +1,7 @@
+HEADLESS = False
+
+SLOW_M0 = 1000
+
+BROWSER = "chromium"
+
+TIMEOUT = 30000
