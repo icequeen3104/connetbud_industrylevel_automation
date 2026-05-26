@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
-
 from locators.booking_locators import BookingLocators
+from config.env import PAYMENT_SUCCESSFUL_PAGE_URL
 
 
 class BookingPage(BasePage):
@@ -9,6 +9,7 @@ class BookingPage(BasePage):
         self.click(BookingLocators.CREDIT_CARD_OPTION)
 
     def enter_card_number(self, card_number):
+        self.wait_for_element_for_payment(BookingLocators.PAYMENT_METHOD_TEXT)
         self.fill(BookingLocators.CARD_NUMBER_INPUT, card_number)
 
     def enter_expiry_date(self, expiry):
@@ -21,6 +22,7 @@ class BookingPage(BasePage):
         self.fill(BookingLocators.CARD_HOLDER_INPUT, name)
 
     def enter_manual_address(self):
+        self.wait_for_element(BookingLocators.ENTER_ADDRESS_MANUALLY)
         self.click(BookingLocators.ENTER_ADDRESS_MANUALLY)
 
     def enter_address(self, address):
@@ -33,10 +35,7 @@ class BookingPage(BasePage):
         self.fill(BookingLocators.PINCODE_INPUT, pincode)
 
     def select_state(self, state):
-        self.select_dropdown(
-            BookingLocators.STATE_DROPDOWN,
-            state
-        )
+        self.select_dropdown(BookingLocators.STATE_DROPDOWN, state)
 
     def click_pay_button(self):
         self.click(BookingLocators.PAY_BUTTON)
@@ -74,3 +73,6 @@ class BookingPage(BasePage):
         self.select_state(state)
 
         self.click_pay_button()
+
+    def verify_url_page(self):
+        self.verify_url(PAYMENT_SUCCESSFUL_PAGE_URL)

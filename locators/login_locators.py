@@ -1,10 +1,7 @@
 class LoginLocators:
 
-    PARENT_LOGIN = "//button[text()='Parent Login']"
-
-    EMAIL = "//input[@id='email']"
-
-    PASSWORD = "//input[@id='password']"
-
+    PARENT_LOGIN_BUTTON = "//button[text()='Parent Login']"
+    EMAIL_INPUT = "//input[@id='email']"
+    PASSWORD_INPUT = "//input[@id='password']"
     LOGIN_BUTTON = "//button[text()='Login']"
 

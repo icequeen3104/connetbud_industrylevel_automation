@@ -2,7 +2,6 @@ from pages.base_page import BasePage
 from locators.login_locators import LoginLocators
 from config.env import BASE_URL
 
-
 class LoginPage(BasePage):
 
     def open_application(self):

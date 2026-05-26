@@ -1,5 +1,4 @@
 from pages.base_page import BasePage
-
 from locators.course_locators import CourseLocators
 
 class CoursePage(BasePage):
@@ -18,6 +17,7 @@ class CoursePage(BasePage):
         self.wait_for_element(CourseLocators.TUTOR_NAME)
 
     def choose_tutor(self):
+        self.wait_for_element(CourseLocators.CHOOSE_TUTOR_BUTTON)
         self.click(CourseLocators.CHOOSE_TUTOR_BUTTON)
 
     def enter_number_of_classes(self, classes):
